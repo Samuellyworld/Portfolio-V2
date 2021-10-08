@@ -4,21 +4,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="preloader.css">
 </head>
 <body>
-    <div class="portfolio">
-        <div class = 'preloader' id="preloader">
+    <!-- preloader -->
+      <div class = 'preloader' id="preloader" hidden>
             <div class="preloader-spinner">
                 <div class="spinner-overlay">
-                  <div class='spinner-container'></div>
-                </div>
+                 <div class='spinner-container'></div>
+             </div>
             </div>
             <h1 class="text-content"> </h1>
         </div>
-    </div>
+        <!-- main content -->
+     <div class="main-content" id="main-content">
+        <div class="nav-overlay" id="nav-overlay">
+         <nav class="nav-bar">
+             <!-- nav bar -->
+            <ul>
+                <li id="nav-1"><a href="#home">Home</a></li>
+                <li id="nav-2"><a href="#about">About</a></li>
+                <li id="nav-3"><a href="#skills">Skills</a></li>
+                <li id="nav-4"><a href="#projects">Projects</a></li>
+                <li id="nav-5"><a href="#contact">Contact</a></li>
+              </ul>
+         </nav>
+        </div>
+          <!-- Menu bars -->
+         <div class="menu-bars" id="menu-bars">
+               <div class="bar1"></div>
+               <div class="bar2"></div>
+               <div class="bar3"></div>
+         </div>
+         <div id="home"><a href="" target="_blank">Aspirin</a></div>
+     </div>
 
-    <script src="preloader.js"></script>
+    <script src="preloader.js"> </script>
+    <script src="script.js"></script>
 </body>
 </html>

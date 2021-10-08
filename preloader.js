@@ -3,21 +3,22 @@ const preloaderSpinner = document.querySelector('.preloader-spinner');
 const preloaderTextContent = document.querySelector('.text-content');
 
 const preloader = () => {
-    preloaderSpinner.hidden = false
+    preloaderDiv.hidden = false
+    preloaderSpinner.hidden = false;
     setTimeout(() => {
-        preloaderSpinner.hidden = true
+        preloaderSpinner.hidden = true;
       preloaderTextContent.textContent = 'Frontend with React';
+      
+     
     }, 1000);
     setTimeout(() => {
         preloaderSpinner.hidden = true
       preloaderTextContent.textContent = 'Backend with NodeJs';
-    }, 2000);
+    }, 3000);
     setTimeout(() => {
         preloaderSpinner.hidden = true
       preloaderTextContent.textContent = 'Fullstack Developer';
-    }, 3000);
-    preloaderSpinner.hidden = false
-   
+    }, 5000);
 }
 
-preloader()
+// preloader()

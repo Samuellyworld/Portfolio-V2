@@ -1,14 +1,217 @@
+:root {
+    --navColor1: #10101a;
+    --navColor2: #10101a;
+    --navColor3: #10101a;
+    --navColor4: #10101a;
+    --navColor5: #10101a;
+  }
 
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
   
-  body {
+body {
+    margin: 0;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background: #10101a;
+    background-size: 400% 400%;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7) ;
+    transform: translateX(-100vw);
+  }
+
+  /*overlay slide in right*/
+  .overlay-slide-right {
+    transition: all 0.7s ease-in-out;
+    transform: translateX(0);
+   }
+   /*overlay slide in left*/
+   .overlay-slide-left {
+    transition: all 0.8s ease-in-out;
+    transform: translateX(-100vw);
+   }
+
+  nav, nav ul {
+    height: 100vh;
     margin: 0;
     padding: 0;
   }
 
-  .preloader{
-      
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    list-style: none;
+  }
+  nav ul li {
+    height: 20%;
+    overflow: hidden;
+  }
+  nav li a {
+    position: relative;
+    top: 45%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  nav li a:hover {
+    transform: scale(1.2);
+  }
+  nav li a::before {
+    content: "";
+    width: 25vw;
+    height: 3px;
+    position: absolute;
+    background-color: #fff;
+    top: 47.5%;
+    left: 0;
+    opacity: 0;
+  }
+  nav li a:hover::before {
+    opacity: 1;
+  }
+
+  /*Selecting each nav element(li)*/
+nav li:nth-of-type(1) {
+    background-color: var(--navColor1);
+  }
+  nav li:nth-of-type(2) {
+    background-color: var(--navColor2);
+  }
+  nav li:nth-of-type(3) {
+    background-color: var(--navColor3);
+  }
+  nav li:nth-of-type(4) {
+    background-color: var(--navColor4);
+  }
+  nav li:nth-of-type(5) {
+    background-color: var(--navColor5);
+  }
+  /*slide in animation with class for each nav item*/
+  .slide-in-1 {
+    animation: slide-in 0.7s linear 0.2s both;
+  }
+  .slide-in-2 {
+    animation: slide-in 0.7s linear 0.4s both;
+  }
+  .slide-in-3 {
+    animation: slide-in 0.7s linear 0.6s both;
+  }
+  .slide-in-4 {
+    animation: slide-in 0.7s linear 0.8s both;
+  }
+  .slide-in-5 {
+    animation: slide-in 0.7s linear 1.0s both;
+  }
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  /*slide out animation with class for each nav item*/
+  .slide-out-1 {
+    animation: slide-out 0.5s linear 1.0s both;
+  }
+  .slide-out-2 {
+    animation: slide-out 0.5s linear 0.8s both;
+  }
+  .slide-out-3 {
+    animation: slide-out 0.5s linear 0.6s both;
+  }
+  .slide-out-4 {
+    animation: slide-out 0.5s linear 0.4s both;
+  }
+  .slide-out-5 {
+    animation: slide-out 0.5s linear 0.2s both;
+  }
+  @keyframes slide-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* --- Menu Bars ------------------------------------ */
+
+.menu-bars {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 10;
+    display: inline;
+    cursor: pointer;
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: rotate(-45deg) translate(-7px, 8px);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+
+
+  div#home {
+    /* width: 100%;
+    height: 100vh; */
+    /* position: relative; */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #10101a;
+  }
+  
+  
+  div#home a {
+    position: absolute;
+    z-index: 2;
+    top: 1.5rem;
+    left: 1.5rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
   }
