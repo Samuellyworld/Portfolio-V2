@@ -42,5 +42,8 @@ h1 {
     position: relative;
 }
 
+.display {
+    display: none;
+}
 
 
