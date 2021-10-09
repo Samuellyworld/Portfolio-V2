@@ -190,7 +190,7 @@ nav li:nth-of-type(1) {
   }
 
 
-  div#home {
+  section#home {
     /* width: 100%;
     height: 100vh; */
     /* position: relative; */
@@ -204,7 +204,7 @@ nav li:nth-of-type(1) {
   }
   
   
-  div#home a {
+  section#home a {
     position: absolute;
     z-index: 2;
     top: 1.5rem;

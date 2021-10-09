@@ -7,6 +7,7 @@ const nav4 = document.getElementById('nav-4');
 const nav5 = document.getElementById('nav-5');
 
 function toggleNav() {
+    overlay.hidden = false;
 	// toggle menubars open/closed
  menuBars.classList.toggle('change');
  // toggle menu active
@@ -27,9 +28,7 @@ function toggleNav() {
     nav5.classList.remove('slide-out-5');
     nav5.classList.add('slide-in-5');
  } else {
- 	// Animate out overlay
- 	overlay.classList.remove('overlay-slide-right');
- 	overlay.classList.add('overlay-slide-left');
+ 	
  	// Animate out our Nav items
  	nav1.classList.remove('slide-in-1');
     nav1.classList.add('slide-out-1');
@@ -41,6 +40,12 @@ function toggleNav() {
     nav4.classList.add('slide-out-4');
     nav5.classList.remove('slide-in-5');
     nav5.classList.add('slide-out-5');
+
+    setTimeout(() => {
+     // Animate out overlay
+ 	overlay.classList.remove('overlay-slide-right');
+ 	overlay.classList.add('overlay-slide-left');
+    }, 1300)
  }
 }
 

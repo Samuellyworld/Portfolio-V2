@@ -4,6 +4,7 @@ const preloaderTextContent = document.querySelector('.text-content');
 const mainContent = document.getElementById('main-content');
 
 
+
 let preloaderIsPaused = false;
 
 const preloader = () => {
@@ -18,13 +19,14 @@ const preloader = () => {
 const loadTextPreloader =  () => {
     mainContent.hidden = true;
     preloaderTextContent.hidden = false;
+    
     setTimeout(() => {
         preloaderSpinner.hidden = true;
-      preloaderTextContent.textContent = 'Frontend with React 👉';  
+      preloaderTextContent.textContent = 'Frontend with React 🚀';  
     }, 1000);
     setTimeout(() => {
         preloaderSpinner.hidden = true
-      preloaderTextContent.textContent = 'Backend with NodeJs 👈 ';
+      preloaderTextContent.textContent = 'Backend with NodeJs 🕵🤳 ';
     }, 2000);
     setTimeout(() => {
         preloaderSpinner.hidden = true
