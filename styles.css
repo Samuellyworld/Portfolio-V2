@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 :root {
     --navColor1: #10101a;
     --navColor2: #10101a;
@@ -215,3 +217,92 @@ nav li:nth-of-type(1) {
     color: #fff;
     border-bottom: 1px solid #fff;
   }
+
+  .introduction {
+      justify-content: center;
+      align-content: center;
+      color: #fff
+  }
+
+  .introduction .welcome{
+     display: flex;
+      font-size: 20px;
+      position: absolute;
+      top: 15.5rem;
+      left: 6.7rem;
+      /* text-align: left;
+      justify-content: left;
+      align-content: left;
+      margin-left: -19em;
+      margin-top: -5em; */
+
+  }
+
+.introduction .welcome .wave {
+        animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+        animation-duration: 2.5s;        /* Change to speed up or slow down */
+        animation-iteration-count: infinite;  /* Never stop waving :) */
+        transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+        display: inline-block;
+      }
+      
+      @keyframes wave-animation {
+          0% { transform: rotate( 0.0deg) }
+         10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+         20% { transform: rotate(-8.0deg) }
+         30% { transform: rotate(14.0deg) }
+         40% { transform: rotate(-4.0deg) }
+         50% { transform: rotate(10.0deg) }
+         60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+        100% { transform: rotate( 0.0deg) }
+      }
+
+
+ svg {
+        display: block;
+        font: 7.5em 'Montserrat';
+        width: 500px;
+        height: 200px;
+        
+    }
+    
+    .text-copy {
+        fill: none;
+        stroke: white;
+        stroke-dasharray: 6% 29%;
+        stroke-width: 5px;
+        stroke-dashoffset: 0%;
+        animation: stroke-offset 5.5s infinite linear;
+    }
+    
+    .text-copy:nth-child(1){
+      stroke: #4D163D;
+      animation-delay: -1;
+    }
+    
+    .text-copy:nth-child(2){
+      stroke: #840037;
+      animation-delay: -2s;
+    }
+    
+    .text-copy:nth-child(3){
+      stroke: #BD0034;
+      animation-delay: -3s;
+    }
+    
+    .text-copy:nth-child(4){
+      stroke: #BD0034;
+      animation-delay: -4s;
+    }
+    
+    .text-copy:nth-child(5){
+      stroke: #FDB731;
+      animation-delay: -5s;
+    }
+    
+    @keyframes stroke-offset{
+      100% {stroke-dashoffset: -35%;}
+    }
+
+
+ 

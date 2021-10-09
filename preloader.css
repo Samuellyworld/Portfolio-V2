@@ -33,7 +33,7 @@
   -webkit-animation: spin 1s ease-in-out infinite;
 }
 
-h1 {
+.text-content {
     font-size: 28px;
     text-align: center;
     padding: 140px 0;
