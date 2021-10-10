@@ -231,8 +231,8 @@ nav li:nth-of-type(1) {
      display: flex;
       font-size: 20px;
       position: absolute;
-      top: 15.5rem;
-      left: 6.7rem;
+      top: 11.5rem;
+      left: 6.5rem;
       /* text-align: left;
       justify-content: left;
       align-content: left;
@@ -260,8 +260,44 @@ nav li:nth-of-type(1) {
         100% { transform: rotate( 0.0deg) }
       }
 
+.header h1 {
+      font-family: "Oswald", sans-serif;
+      letter-spacing: 0;
+       font-size: 49px;
+      display: block;
+      margin: 0 auto;
+     position: absolute;
+     top: 5em;
+     left : 2.5em;
+  
+  /* Clip Background Image */
+  
+      background: url('header.png') repeat-y;
+      -webkit-background-clip: text;
+      background-clip: text;
+  
+  /* Animate Background Image */
+  
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: aitf 20s linear infinite;
+  
+  /* Activate hardware acceleration for smoother animations */
+  
+      -webkit-transform: translate3d(0,0,0);
+      -webkit-backface-visibility: hidden;
+  
+    }
+  
+  
+  /* Animate Background Image */
+  
+  @-webkit-keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
 
- svg {
+
+ /* svg {
         display: block;
         font: 7.5em 'Montserrat';
         width: 500px;
@@ -305,7 +341,7 @@ nav li:nth-of-type(1) {
     
     @keyframes stroke-offset{
       100% {stroke-dashoffset: -35%;}
-    }
+    } */
 
 
  
