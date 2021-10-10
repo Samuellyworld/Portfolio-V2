@@ -1,4 +1,8 @@
-
+ .preloader {
+   text-align: center  !important;
+   justify-content: center;
+   margin: auto;
+ }
 .spinner-overlay {
     z-index: 3;
     margin-top: 150px;

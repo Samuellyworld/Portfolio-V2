@@ -19,7 +19,6 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow-x: hidden;
     background: #10101a;
     background-size: 400% 400%;
@@ -205,11 +204,11 @@ nav li:nth-of-type(1) {
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #10101a;
+    /* color: #10101a; */
   }
   
   
-  section#home a {
+  section#home .navbar a {
     position: absolute;
     z-index: 2;
     top: 1.5rem;
@@ -217,8 +216,8 @@ nav li:nth-of-type(1) {
     text-decoration: none;
     font-size: 0.8rem;
     padding-bottom: 5px;
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    color: rgba(218, 198, 24, 0.534);;
+    border-bottom: 1px solid rgba(218, 198, 24, 0.534);
   }
 
   .introduction {
@@ -294,9 +293,62 @@ nav li:nth-of-type(1) {
   @-webkit-keyframes aitf {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
+  } 
+
+  .header p {
+    color: rgba(218, 198, 24, 0.534);
+    margin-left: 5em;
+    margin-bottom: 4em;
   }
 
+  
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
 
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+  .fourth {
+    margin: auto;
+    border-color: #f1c40f;
+    color: #fff;
+    background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+  }
+  .fourth:hover {
+    background-position: 0;
+  }
+  
  /* svg {
         display: block;
         font: 7.5em 'Montserrat';
