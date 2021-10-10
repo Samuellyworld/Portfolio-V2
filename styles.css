@@ -348,7 +348,17 @@ nav li:nth-of-type(1) {
   .fourth:hover {
     background-position: 0;
   }
+
   
+  
+.big-sam img {
+  position: absolute;
+  top:0em;
+  right: 0em;;
+  width: 100px;
+  height: 100px;
+ 
+}
  /* svg {
         display: block;
         font: 7.5em 'Montserrat';
