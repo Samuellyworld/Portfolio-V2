@@ -33,13 +33,86 @@
   -webkit-animation: spin 1s ease-in-out infinite;
 }
 
-.text-content {
+/* .text-content {
     font-size: 28px;
     text-align: center;
     padding: 140px 0;
    color:gray;
    overflow: hidden;
     position: relative;
-}
+} */
 
+/* preloader text animation */
+.container{
+    overflow: hidden;
+    text-align: center;
+    padding: 140px 0;
+    position: relative;
+
+  }
+  
+  h1, h2 , h3{
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+    
+.title{
+      width: 100%;
+      float: left;
+      color: whitesmoke;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      transform: translateY(-50px);
+      opacity: 0;
+      animation-name: titleAnimation;
+      animation-timing-function:ease;
+      animation-duration: 3s;
+    }
+
+h1 span{
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+  }
+
+
+  
+h2 span{
+      animation-delay: 3.8s;
+      animation-fill-mode: forwards;
+   }
+ 
+
+h3 span {
+        animation-delay: 6.9s;
+        animation-fill-mode: forwards;
+    }
+
+  
+ @keyframes titleAnimation {
+        0% {
+          transform: translateY(-50px);
+          opacity: 0;
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      }
+      20% {
+          transform: translateY(0);
+          opacity: 1;
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      }
+      80% {
+           transform: translateY(0);
+           opacity: 1;
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      }
+      100% {
+           transform: translateY(50px);
+           opacity: 0;
+          -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+          clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+        
+      }
+    }
 

@@ -24,6 +24,9 @@ body {
     background: #10101a;
     background-size: 400% 400%;
   }
+  .main-content {
+      overflow-x : hidden;
+  }
 
   .nav-overlay {
     position: fixed;
