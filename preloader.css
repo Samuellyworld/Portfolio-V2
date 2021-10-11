@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ 
  .preloader {
-   text-align: center  !important;
+   text-align: center;
    justify-content: center;
    margin: auto;
  }
@@ -61,6 +63,7 @@
   }
     
 .title{
+      font-family: 'Open Sans', sans-serif;;
       width: 100%;
       float: left;
       color: whitesmoke;
