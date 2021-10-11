@@ -11,13 +11,40 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+/* rgba(128, 128, 128) */
 
 :root {
+  --bodyBackground : grey;
+  --navColor1: rgba(128, 128, 128) ;
+  --navColor2: rgba(128, 128, 128) ;
+  --navColor3: rgba(128, 128, 128) ;
+  --navColor4: rgba(128, 128, 128);
+  --navColor5 : rgba(128, 128, 128);
+  --navColor :  #f1c40f;
+  --navOverlay :  #f1c40f;
+  --introduction : #10101a; 
+  --navAnchor : #10101a;
+  --onHeaderParagraph : #f1c40f;
+  --onHeaderClipUrl : url(bon-fire.png);
+  --onHeaderAnimation : 17s;
+  --onSliderColorChange : rgba(245, 245, 245, 0.555);
+  }
+
+  [data-theme="dark"] {
+    --bodyBackground : #10101a;
     --navColor1: #10101a;
     --navColor2: #10101a;
     --navColor3: #10101a;
     --navColor4: #10101a;
     --navColor5: #10101a;
+    --navColor : #fff;
+    --navOverlay : #fff;
+    --introduction : #fff;
+    --navAnchor :  rgba(218, 198, 24, 0.534);
+    --onHeaderParagraph : rgba(218, 198, 24, 0.534);
+    --onHeaderClipUrl : url(header.png);
+    --onHeaderAnimation : 20s;
+    --onSliderColorChange : grey
   }
 
 html {
@@ -32,7 +59,7 @@ body {
     display: flex;
     align-items: center;
     overflow-x: hidden;
-    background: #10101a;
+    background: var(--bodyBackground);
     background-size: 400% 400%;
   }
   .main-content {
@@ -81,7 +108,7 @@ body {
   nav li a {
     position: relative;
     top: 45%;
-    color: #fff;
+    color: var(--navColor);
     text-transform: uppercase;
     letter-spacing: 4px;
     text-decoration: none;
@@ -96,7 +123,7 @@ body {
     width: 25vw;
     height: 3px;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--navColor);
     top: 47.5%;
     left: 0;
     opacity: 0;
@@ -186,7 +213,7 @@ nav li:nth-of-type(1) {
   .bar3 {
     width: 35px;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--navOverlay);
     margin: 8px 0;
     transition: 0.4s;
   }
@@ -227,17 +254,17 @@ nav li:nth-of-type(1) {
     top: 1.5rem;
     left: 1.5rem;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     padding-bottom: 5px;
-    color: rgba(218, 198, 24, 0.534);;
-    border-bottom: 1px solid rgba(218, 198, 24, 0.534);
+    color: var(--navAnchor);
+    border-bottom: 1px solid var(--navAnchor);
     font-family: Calibre-Regular, sans-serif;
   }
 
   .introduction {
       justify-content: center;
       align-content: center;
-      color: #fff;
+      color: var(--introduction);
       font-family: 'Calibre-Regular', sans-serif;
   }
 
@@ -286,14 +313,14 @@ nav li:nth-of-type(1) {
   
   /* Clip Background Image */
   
-      background: url('header.png') repeat-y;
+      background: var(--onHeaderClipUrl) repeat-y;
       -webkit-background-clip: text;
       background-clip: text;
   
   /* Animate Background Image */
   
       -webkit-text-fill-color: transparent;
-      -webkit-animation: aitf 20s linear infinite;
+      -webkit-animation: aitf var(--onHeaderAnimation) linear infinite;
   
   /* Activate hardware acceleration for smoother animations */
   
@@ -311,7 +338,7 @@ nav li:nth-of-type(1) {
   } 
 
   .header p {
-    color: rgba(218, 198, 24, 0.534);
+    color: var(--onHeaderParagraph);
     margin-left: 5em;
     margin-bottom: 4em;
   }

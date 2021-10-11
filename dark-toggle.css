@@ -46,7 +46,7 @@
    */
 
    .slider {
-    background: grey;
+    background: var(--onSliderColorChange);
     bottom: 0;
     cursor: pointer;
     left: -63px;
@@ -96,7 +96,7 @@
     width: 26px;
    }
   input:checked {
-    background: grey;
+    background: var(--onSliderColorChange);
   }
   
   input:checked + .slider::before{
