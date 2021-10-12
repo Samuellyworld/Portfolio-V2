@@ -15,11 +15,11 @@
 
 :root {
   --bodyBackground : grey;
-  --navColor1: rgba(128, 128, 128) ;
-  --navColor2: rgba(128, 128, 128) ;
-  --navColor3: rgba(128, 128, 128) ;
-  --navColor4: rgba(128, 128, 128);
-  --navColor5 : rgba(128, 128, 128);
+  --navColor1: rgba(63, 60, 60) ;
+  --navColor2: rgba(63, 60, 60) ;
+  --navColor3: rgba(63, 60, 60) ;
+  --navColor4: rgba(63, 60, 60);
+  --navColor5 : rgba(63, 60, 60);
   --navColor :  #f1c40f;
   --navOverlay :  #f1c40f;
   --introduction : #10101a; 
@@ -61,6 +61,7 @@ body {
     overflow-x: hidden;
     background: var(--bodyBackground);
     background-size: 400% 400%;
+    /* overflow-y: scroll; */
   }
   .main-content {
       overflow-x : hidden;
@@ -233,11 +234,16 @@ nav li:nth-of-type(1) {
     transform: rotate(45deg) translate(-6px, -8px);
   }
 
+  section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+  }
 
-  section#home {
-    /* width: 100%;
-    height: 100vh; */
-    /* position: relative; */
+
+  section#home { 
+    position: relative;
     display: flex;
     justify-content: left;
     align-items: left;
@@ -262,23 +268,24 @@ nav li:nth-of-type(1) {
   }
 
   .introduction {
-      justify-content: center;
-      align-content: center;
+      /* justify-content: center;
+      align-content: center; */
       color: var(--introduction);
       font-family: 'Calibre-Regular', sans-serif;
   }
 
   .introduction .welcome{
-     display: flex;
+      margin-top: 9.5em;
+      margin-left: 2em;
       font-size: 20px;
-      position: absolute;
-      top: 11.5rem;
-      left: 6.5rem;
-      /* text-align: left;
+      /* position: absolute; */
+      /* top: 11.5rem;
+      left: 6.5rem; */
+      /* text-align: left; */
       justify-content: left;
       align-content: left;
-      margin-left: -19em;
-      margin-top: -5em; */
+      /* margin-left: -19em;
+      margin-top: -5em; */ 
 
   }
 
@@ -306,10 +313,11 @@ nav li:nth-of-type(1) {
       letter-spacing: 0;
        font-size: 49px;
       display: block;
-      margin: 0 auto;
+      margin-left: 1.2em;
+      margin-top: 0em;
      position: absolute;
-     top: 5em;
-     left : 2.5em;
+     /* top: 5em;
+     left : 2.5em; */
   
   /* Clip Background Image */
   
@@ -339,7 +347,8 @@ nav li:nth-of-type(1) {
 
   .header p {
     color: var(--onHeaderParagraph);
-    margin-left: 5em;
+    margin-left: 2em;
+    padding-top: 5em;
     margin-bottom: 4em;
   }
 
@@ -351,7 +360,6 @@ nav li:nth-of-type(1) {
           appearance: none;
   background-color: transparent;
   border-radius: 0.6em;
-
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -396,11 +404,100 @@ nav li:nth-of-type(1) {
   
 .big-sam img {
  position: absolute;
- right: 23em;
+ right: 23em ;
  top: 14em;
   width: 100px;
   height: 100px;
  
+}
+
+section#about {
+  height: 100vh;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 40em;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  overflow-x: hidden;
+}
+
+section#about p {
+  font-size: 18px;
+  color: grey;
+  font-family: Calibre-Regular, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 7em;
+}
+
+
+.button {
+  --offset: 10px;
+  --border-size: 2px;
+  margin-left: 67em;
+  margin-top: -4em;
+  display: block;
+  position: relative;
+  padding: 1.5em 3em;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #e55743;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  transition: background 0.8s ease;
+}
+.button:hover {
+  background: rgba(100, 0, 0, .03);
+}
+.button__horizontal, .button__vertical {
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+.button__horizontal::before, .button__vertical::before {
+  content: '';
+  position: absolute;
+  border: inherit;
+}
+.button__horizontal {
+  --vertical-offset: calc(var(--offset) * -1);
+  border-top: var(--border-size) solid currentcolor;
+  border-bottom: var(--border-size) solid currentcolor;
+}
+.button__horizontal::before {
+  top: calc(var(--vertical-offset) - var(--border-size));
+  bottom: calc(var(--vertical-offset) - var(--border-size));
+  left: calc(var(--vertical-offset) * -1);
+  right: calc(var(--vertical-offset) * -1);
+}
+.button:hover .button__horizontal {
+  transform: scaleX(0);
+}
+.button__vertical {
+  --horizontal-offset: calc(var(--offset) * -1);
+  border-left: var(--border-size) solid currentcolor;
+  border-right: var(--border-size) solid currentcolor;
+}
+.button__vertical::before {
+  top: calc(var(--horizontal-offset) * -1);
+  bottom: calc(var(--horizontal-offset) * -1);
+  left: calc(var(--horizontal-offset) - var(--border-size));
+  right: calc(var(--horizontal-offset) - var(--border-size));
+}
+.button:hover .button__vertical {
+  transform: scaleY(0);
 }
  /* svg {
         display: block;

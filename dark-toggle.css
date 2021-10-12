@@ -3,12 +3,12 @@
     display: flex;
     text-align: center;
     z-index: 3;
-    position: fixed;
+    position: absolute;
     right: 25px;
     top: 30px;
   }
   
-  .theme-switch-wrapper span {
+  /* .theme-switch-wrapper span {
     margin-right: 10px;
     font-size: 1rem;
     font-family: 'Roboto Condensed', sans-serif;
@@ -19,7 +19,7 @@
     top: -5px;
     right: 5px;
     color: var(--on-toggle-text);
-  }
+  } */
   
   .theme-switch {
     display: inline-block;

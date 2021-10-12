@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
  
+ 
  .preloader {
+   z-index: 1000;
    text-align: center;
    justify-content: center;
    margin: auto;
+   overflow: hidden;
+   overflow-y: hidden;
  }
 .spinner-overlay {
     z-index: 3;
