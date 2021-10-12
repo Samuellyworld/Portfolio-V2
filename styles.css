@@ -14,7 +14,7 @@
 /* rgba(128, 128, 128) */
 
 :root {
-  --bodyBackground : grey;
+  --bodyBackground : rgba(63, 60, 60) ;
   --navColor1: rgba(63, 60, 60) ;
   --navColor2: rgba(63, 60, 60) ;
   --navColor3: rgba(63, 60, 60) ;
@@ -28,6 +28,8 @@
   --onHeaderClipUrl : url(bon-fire.png);
   --onHeaderAnimation : 17s;
   --onSliderColorChange : rgba(245, 245, 245, 0.555);
+  --paragraphColor : #10101a;
+  /* --resumeColor : ; */
   }
 
   [data-theme="dark"] {
@@ -44,7 +46,8 @@
     --onHeaderParagraph : rgba(218, 198, 24, 0.534);
     --onHeaderClipUrl : url(header.png);
     --onHeaderAnimation : 20s;
-    --onSliderColorChange : grey
+    --onSliderColorChange : grey;
+    --paragraphColor : grey;
   }
 
 html {
@@ -425,7 +428,7 @@ section#about {
 
 section#about p {
   font-size: 18px;
-  color: grey;
+  color: var(--paragraphColor);
   font-family: Calibre-Regular, sans-serif;
   font-weight: bold;
   text-align: left;
@@ -444,14 +447,14 @@ section#about p {
   appearance: none;
   border: 0;
   background: transparent;
-  color: #e55743;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   outline: none;
   cursor: pointer;
   font-weight: bold;
   border-radius: 0;
-  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  box-shadow: inset 0 0 0 var(--border-size) #e55743;
   transition: background 0.8s ease;
 }
 .button:hover {
@@ -473,8 +476,8 @@ section#about p {
 }
 .button__horizontal {
   --vertical-offset: calc(var(--offset) * -1);
-  border-top: var(--border-size) solid currentcolor;
-  border-bottom: var(--border-size) solid currentcolor;
+  border-top: var(--border-size) solid #f1c40f;
+  border-bottom: var(--border-size) solid #f1c40f;
 }
 .button__horizontal::before {
   top: calc(var(--vertical-offset) - var(--border-size));
@@ -487,8 +490,8 @@ section#about p {
 }
 .button__vertical {
   --horizontal-offset: calc(var(--offset) * -1);
-  border-left: var(--border-size) solid currentcolor;
-  border-right: var(--border-size) solid currentcolor;
+  border-left: var(--border-size) solid #f1c40f;
+  border-right: var(--border-size) solid #f1c40f;
 }
 .button__vertical::before {
   top: calc(var(--horizontal-offset) * -1);
