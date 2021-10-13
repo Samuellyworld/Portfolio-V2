@@ -29,7 +29,8 @@
   --onHeaderAnimation : 17s;
   --onSliderColorChange : rgba(245, 245, 245, 0.555);
   --paragraphColor : #10101a;
-  /* --resumeColor : ; */
+  --fileIcon : rgb(156, 49, 49);
+  --scrollbarColor : #10101a;
   }
 
   [data-theme="dark"] {
@@ -48,7 +49,44 @@
     --onHeaderAnimation : 20s;
     --onSliderColorChange : grey;
     --paragraphColor : grey;
+    --fileIcon : grey;
+    --scrollbarColor : rgba(218, 198, 24, 0.534)
   }
+
+  ::-webkit-scrollbar {
+       width: 10px;
+       height : 10px;
+      transform-origin: center right;
+      transition: transform 0.3s, opacity 0.3s;
+      opacity: 0; 
+    }
+  ::-webkit-scrollbar:hover {
+        transform: scaleX(1.45); 
+      }
+      ::-webkit-scrollbar:hover, .has-scroll-scrolling .-scrollbar, .has-scroll-dragging .c-scrollbar {
+        opacity: 1; }
+  
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+      cursor: -webkit-pointer
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbarColor); 
+    border-radius: 10px;
+      cursor: -webkit-pointer;
+      cursor: pointer;
+    }
+      ::webkit-scroll-dragging ::webkit-scrollbar-thumb {
+        cursor: -webkit-pointer;
+        cursor: pointer;
+       }
+  
+  
 
 html {
     box-sizing: border-box;
@@ -64,10 +102,11 @@ body {
     overflow-x: hidden;
     background: var(--bodyBackground);
     background-size: 400% 400%;
-    /* overflow-y: scroll; */
+    /* overflow-y: auto; */
   }
   .main-content {
       overflow-x : hidden;
+      width: 100vw;
   }
 
   .nav-overlay {
@@ -419,7 +458,7 @@ section#about {
   display: block;
   width: 100%;
   position: absolute;
-  top: 40em;
+  top: 48.3em;
   text-align: center;
   justify-content: center;
   align-content: center;
@@ -456,6 +495,9 @@ section#about p {
   border-radius: 0;
   box-shadow: inset 0 0 0 var(--border-size) #e55743;
   transition: background 0.8s ease;
+}
+.button .fas {
+  color: var(--fileIcon);
 }
 .button:hover {
   background: rgba(100, 0, 0, .03);

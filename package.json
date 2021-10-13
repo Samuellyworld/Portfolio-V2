@@ -1,16 +1,18 @@
 {
   "name": "aspirin.dev",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "version": "1.0.0",
   "description": "This is a personal porfolio ",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.html"
+    "start": "parcel index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Samuellyworld/Redesigned-Portfolio.git"
   },
+  "type": "module",
   "author": "samuel-tosin",
   "license": "ISC",
   "bugs": {
@@ -19,5 +21,8 @@
   "homepage": "https://github.com/Samuellyworld/Redesigned-Portfolio#readme",
   "dependencies": {
     "locomotive-scroll": "^4.1.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
   }
 }
