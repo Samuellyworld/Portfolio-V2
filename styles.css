@@ -10,6 +10,7 @@
       }
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Scheherazade+New:wght@700&display=swap');
 
 /* rgba(128, 128, 128) */
 
@@ -454,7 +455,7 @@ nav li:nth-of-type(1) {
 }
 
 section#about {
-  height: 100vh;
+  height: 35vh;
   display: block;
   width: 100%;
   position: absolute;
@@ -544,6 +545,47 @@ section#about p {
 .button:hover .button__vertical {
   transform: scaleY(0);
 }
+section#skills {
+    height: 100vh;
+    display: block;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20.5em;
+}
+
+section#skills h2 {
+  font-size: 28px;
+  font-family:  'Scheherazade New', serif;
+  color : #f1c40f;
+}
+
+section#skills .tools .right ul{
+ float: right;
+ margin-right: 30em;
+clear: both;
+
+}
+
+
+
+section#skills .tools .left ul {
+  float: left;
+  clear: both;
+  margin-top: -17em;
+  margin-left: 30em;
+}
+
+section#skills .tools  ul li {
+  padding: 10px;
+  font-size: 20px;
+  font-family: Calibre-Regular, sans-serif;
+  font-weight: bold;
+  color: var(--paragraphColor);
+}
+
+
  /* svg {
         display: block;
         font: 7.5em 'Montserrat';
