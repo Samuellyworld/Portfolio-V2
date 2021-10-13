@@ -3,14 +3,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">  -->
+     <!-- AOS library -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
-    <!-- <link  rel="stylesheet" href="locomotive-scroll.css" /> -->
-     <!-- AOS library -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    locomotive on scroll -->
-   <!-- <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"/>     -->
     <title>PortFolio</title>
   
     <link rel="stylesheet" href="preloader.css">
@@ -45,7 +41,7 @@
             </div>            
         </div>
         <!-- main content -->
-     <div class="main-content" id="main-content"  hidden>
+     <div class="main-content" id="main-content" hidden>
         <div class="nav-overlay" id="nav-overlay" hidden>
          <nav class="nav-bar">
              <!-- nav bar -->
@@ -78,36 +74,36 @@
             <a href="" target="_blank">Aspirin</a>
            </div>
            <div class="introduction">
-             <div class="welcome">
+             <div class="welcome" data-aos="fade-right">
                 <p>HI THERE <span class="wave">👋 </span>, I'M </p>
              </div>
              <div class="header">
-               <h1> SAMUEL TOSIN. </h1>
-               <p> SOFTWARE DEVELOPER | FULLSTACK DEVELOPER 💻</p>
-               <button class="btn fourth">HIRE ME</button>
+               <h1 data-aos="fade-right" data-aos-delay="1000"> SAMUEL TOSIN. </h1>
+               <p data-aos="fade-right" data-aos-delay="1400"> SOFTWARE DEVELOPER | FULLSTACK DEVELOPER 💻</p>
+               <button data-aos="fade-up" data-aos-delay="1600" class="btn fourth">HIRE ME</button>
                
            </div>
            
         </section>
-        <div class="big-sam">
-          <img src="sam.png" id="big">
+        <div class="big-sam" >
+          <img data-aos="fade-left" data-aos-delay="1800" src="sam.png" id="big">
          </div>
         <section id="about" >
-            <p> Hi 🙋‍♂️, Now that you are here, I am Samuel Ogedengbe Tosin. A fullstack web developer, I have hands on experience working with JavaScript and its ecosystem </p>
-            <p> I love to write, code, and listen to good music.</p>
-            <p> Personally, I love constant learning, growing and working towards becoming a better version of myself 😄.</p>
-            <p> On some days, I enjoy writing API documentation, as well as building APIs, using Nodejs.</p>
-            <p> I am currently learning how to write better tests with Jest.</p>
-            <button class="button">
+            <p data-aos="fade-in"> Hi 🙋‍♂️, Now that you are here. I am Samuel Tosin. I'm a web developer, I have hands on experience working with JavaScript and its ecosystem </p>
+            <p data-aos="fade-in" data-aos-delay="400"> I love to write, code, and listen to good music.</p>
+            <p data-aos="fade-in" data-aos-delay="600"> Personally, I love constant learning, growing and working towards becoming a better version of myself 😄.</p>
+            <p data-aos="fade-in" data-aos-delay="800"> On some days, I enjoy writing API documentation, as well as building APIs, using Nodejs.</p>
+            <p data-aos="fade-in" data-aos-delay="1000"> I am currently learning how to write better tests with Jest.</p>
+            <button class="button"  data-aos="fade-left" data-aos-delay="1200">
               Résumé <i class="fas fa-file"></i>
               <div class="button__horizontal"></div>
               <div class="button__vertical"></div>
             </button>
         </section>
         <section id="skills">
-          <h2> SKILLS & TECHNOLOGIES</h2>
+          <h2 data-aos="fade-down"> SKILLS & TECHNOLOGIES</h2>
           <div class="tools">
-          <div class='right'>
+          <div class='right' data-aos="fade-left" data-aos-delay="400">
             <ul>
               <li>JavaScript</li>
               <li>NodeJs</li>
@@ -117,7 +113,7 @@
               <li>TypeScript</li>
             </ul>
           </div>
-          <div class="left">
+          <div class="left" data-aos="fade-right" data-aos-delay="800">
             <ul>
               <li>ReactJs | NextJs</li>
               <li>Firebase</li>
@@ -131,25 +127,11 @@
         </section>
          
       </div>
-     <!-- Aos.js -->
-        <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-        <!-- <script src="locomotive-scroll.min.js"></script> -->
-        <!-- <script>
-          (function () {
-              var scroll = new LocomotiveScroll();
-          })();
-      </script> -->
-       <!-- <script src="scroll.js">
-        
-        </script> -->
-        <!-- <script> -->
-        <!-- // AOS.init({
-        // delay: 200, // values from 0 to 3000, with step 50ms
-        // duration: 1500, // values from 0 to 3000, with step 50ms
-        // once: false, // whether animation should happen only once - while scrolling down
-        // mirror: false, // whether elements should animate out while scrolling past them
-        // }); -->
-        <!-- // </script> -->
+   <!-- Aos.js -->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+     
+    </script>
     <script src="preloader.js"> </script>
     <script src="script.js"></script>
     <script src="dark-toggle.js"></script>
