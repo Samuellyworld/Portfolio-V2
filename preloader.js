@@ -50,6 +50,13 @@ const mainContentPage =  () => {
         once: false, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
         });
+    //     const scroll = new LocomotiveScroll({
+    //         el: document.querySelector('[data-scroll-container]') ,
+    //         smooth: true,
+    //         reloadOnContextChange: true,
+    //         multiplier: 0.65,
+    //         inertia: 0.3,
+    //   });
     }, 12000)
  
     

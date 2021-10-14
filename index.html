@@ -8,7 +8,9 @@
     <!-- font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <title>PortFolio</title>
-  
+    <!-- locomotive on scroll -->
+    <link rel="stylesheet" href="locomotive-scroll.css"/>
+
     <link rel="stylesheet" href="preloader.css">
     <link rel="stylesheet" href="dark-toggle.css">
     <link rel="stylesheet" href="styles.css">
@@ -41,7 +43,7 @@
             </div>            
         </div>
         <!-- main content -->
-     <div class="main-content" id="main-content" hidden>
+     <div class="main-content" id="main-content" data-scroll-container hidden>
         <div class="nav-overlay" id="nav-overlay" hidden>
          <nav class="nav-bar">
              <!-- nav bar -->
@@ -69,7 +71,7 @@
                 <!--  -->
             </label>
         </div>
-         <section id="home">
+         <section id="home" >
            <div class='navbar'>
             <a href="" target="_blank">Aspirin</a>
            </div>
@@ -88,7 +90,7 @@
         <div class="big-sam" >
           <img data-aos="fade-left" data-aos-delay="1800" src="sam.png" id="big">
          </div>
-        <section id="about" >
+        <section id="about">
             <p data-aos="fade-in"> Hi 🙋‍♂️, Now that you are here. I am Samuel Tosin. I'm a web developer, I have hands on experience working with JavaScript and its ecosystem </p>
             <p data-aos="fade-in" data-aos-delay="400"> I love to write, code, and listen to good music.</p>
             <p data-aos="fade-in" data-aos-delay="600"> Personally, I love constant learning, growing and working towards becoming a better version of myself 😄.</p>
@@ -127,6 +129,7 @@
         </section>
          
       </div>
+    <script src="locomotive-scroll.min.js"></script>
    <!-- Aos.js -->
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
