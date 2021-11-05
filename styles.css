@@ -32,6 +32,7 @@
   --paragraphColor : #10101a;
   --fileIcon : rgb(156, 49, 49);
   --scrollbarColor : #10101a;
+  --aboutParagraph : whitesmoke;
   }
 
   [data-theme="dark"] {
@@ -51,7 +52,8 @@
     --onSliderColorChange : grey;
     --paragraphColor : grey;
     --fileIcon : grey;
-    --scrollbarColor : rgba(218, 198, 24, 0.534)
+    --scrollbarColor : rgba(218, 198, 24, 0.534);
+    --aboutParagraph :  #f1c40f;
   }
 
   ::-webkit-scrollbar {
@@ -473,6 +475,10 @@ section#about p {
   font-weight: bold;
   text-align: left;
   margin-left: 7em;
+}
+
+section#about p span {
+  color :  #f1c40f;
 }
 
 
