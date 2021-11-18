@@ -4,9 +4,10 @@
   "version": "1.0.0",
   "description": "This is a personal porfolio ",
   "main": "index.html",
+  "private" : true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.html"
+    "start": "webpack-dev-server --config .webpack/webpack.config.js --mode development"
   },
   "repository": {
     "type": "git",
