@@ -6,14 +6,14 @@ function darkMode() {
 	toggleIcon.classList.remove('fa-sun');
 	// toggleIcon.children[1].classList.remove('ink')
 	toggleIcon.classList.add('fa-moon');
-	bigSamToggle.src = './anime.gif'
+	bigSamToggle.src = '../assets/anime.gif'
 }
 function lightMode() {
 	
 	toggleIcon.classList.remove('fa-moon')
 	toggleIcon.classList.add('fa-sun');
 	// toggleIcon.children[1].classList.add('ink');
-	 bigSamToggle.src = './sam.png'
+	 bigSamToggle.src = '../assets/sam.png'
 	}
 
 	// toggle theme dynamically 
